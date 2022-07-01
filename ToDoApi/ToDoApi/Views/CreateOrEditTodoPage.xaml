@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoApi.Views.CreateOrEditTodoPage">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label Text="Name" />
+            <Entry Text="{Binding Name}" Placeholder="Enter item" />
+            <Label Text="Notes" />
+            <Entry Text="{Binding Notes}" Placeholder="Enter notes" />
+            <Label Text="Done" />
+            <Switch IsToggled="{Binding Done}" HorizontalOptions ="Start"/>
+            <Button Text="Save" x:Name="BtnSaveItem" Clicked="BtnSaveItem_Clicked" />
+            <Button Text="Delete" x:Name="BtnDeleteItem" Clicked="BtnDeleteItem_Clicked" />
+            <Button Text="Cancel" x:Name="BtnCancel" Clicked="BtnCancel_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
